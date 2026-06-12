@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dizdar — Çocuğunuzun okula geliş gidişi cebinizde</title>
+<meta name="description" content="Dizdar, çocuğunuzun okula giriş ve çıkışını anında telefonunuzdan takip etmenizi sağlayan ücretsiz ve reklamsız bir aile uygulamasıdır.">
+<style>
+:root {
+  --forest:#1F4D3A; --forest-dark:#143528; --cream:#F5EDD6;
+  --cream-light:#FAF4E0; --cream-muted:#E8DFC4;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  background:var(--cream); color:var(--forest-dark);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6; -webkit-font-smoothing:antialiased;
+}
+.container { max-width:1080px; margin:0 auto; padding:0 24px; }
+
+/* Üst bar */
+.topbar {
+  position:sticky; top:0; z-index:10;
+  background:rgba(245,237,214,0.85); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--cream-muted);
+}
+.topbar-inner { display:flex; align-items:center; justify-content:space-between; height:64px; }
+.brand { display:flex; align-items:center; gap:10px; font-weight:700; font-size:20px; color:var(--forest); letter-spacing:-0.3px; }
+.brand .logo { width:32px; height:32px; }
+.topnav { display:flex; gap:6px; }
+.topnav a { color:var(--forest); text-decoration:none; padding:8px 16px; border-radius:999px; font-size:14px; transition:0.2s; }
+.topnav a:hover { background:var(--forest); color:var(--cream); }
+
+/* Hero */
+.hero { text-align:center; padding:72px 24px 48px; position:relative; overflow:hidden; }
+.hero::before {
+  content:""; position:absolute; width:480px; height:480px; border-radius:50%;
+  background:var(--cream-muted); opacity:0.4; top:-200px; right:-120px; z-index:0;
+}
+.hero-inner { position:relative; z-index:1; max-width:720px; margin:0 auto; }
+.badge {
+  display:inline-flex; align-items:center; gap:7px; background:rgba(31,77,58,0.1);
+  color:var(--forest); padding:7px 16px; border-radius:999px; font-size:13px; font-weight:600; margin-bottom:24px;
+}
+.hero h1 { font-size:clamp(36px,7vw,60px); font-weight:700; letter-spacing:-1.8px; color:var(--forest); line-height:1.05; margin-bottom:18px; }
+.hero .tagline { font-size:clamp(17px,3vw,21px); opacity:0.72; max-width:540px; margin:0 auto 36px; }
+.cta-row { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.btn-primary {
+  background:var(--forest); color:var(--cream); text-decoration:none;
+  padding:15px 34px; border-radius:999px; font-size:16px; font-weight:600;
+  box-shadow:0 8px 24px rgba(31,77,58,0.25); transition:0.2s;
+}
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 12px 30px rgba(31,77,58,0.32); }
+.btn-ghost {
+  background:transparent; color:var(--forest); text-decoration:none;
+  padding:15px 30px; border-radius:999px; font-size:16px; font-weight:600; border:1.5px solid var(--forest); transition:0.2s;
+}
+.btn-ghost:hover { background:var(--forest); color:var(--cream); }
+
+/* Ekran görüntüleri */
+.shots { padding:40px 24px 20px; }
+.shots-grid {
+  display:flex; gap:24px; justify-content:center; flex-wrap:wrap; max-width:1000px; margin:0 auto;
+}
+.shot { width:240px; }
+.shot img {
+  width:100%; border-radius:28px; border:1px solid var(--cream-muted);
+  box-shadow:0 20px 50px rgba(20,53,40,0.18); display:block;
+}
+.shot p { text-align:center; margin-top:14px; font-size:14px; font-weight:600; color:var(--forest); opacity:0.8; }
+
+/* Özellikler */
+.features { padding:64px 24px 40px; }
+.section-title { text-align:center; font-size:clamp(26px,5vw,38px); font-weight:700; color:var(--forest); letter-spacing:-0.8px; margin-bottom:8px; }
+.section-sub { text-align:center; opacity:0.65; font-size:16px; margin-bottom:44px; }
+.features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; max-width:960px; margin:0 auto; }
+.feature { background:var(--cream-light); border:1px solid var(--cream-muted); border-radius:20px; padding:28px; transition:0.2s; }
+.feature:hover { transform:translateY(-4px); box-shadow:0 14px 30px rgba(20,53,40,0.1); }
+.feature .icon { width:48px; height:48px; border-radius:14px; background:rgba(31,77,58,0.1); display:flex; align-items:center; justify-content:center; font-size:24px; margin-bottom:16px; }
+.feature h3 { color:var(--forest); font-size:18px; margin-bottom:8px; }
+.feature p { opacity:0.72; font-size:14.5px; }
+
+/* Ücretsiz şerit */
+.free-band { background:var(--forest); color:var(--cream); text-align:center; padding:56px 24px; margin-top:40px; }
+.free-band h2 { font-size:clamp(24px,5vw,34px); font-weight:700; letter-spacing:-0.6px; margin-bottom:12px; }
+.free-band p { opacity:0.82; font-size:16px; max-width:520px; margin:0 auto 28px; }
+.free-band .btn-primary { background:var(--cream); color:var(--forest); box-shadow:0 8px 24px rgba(0,0,0,0.2); }
+
+/* Footer */
+footer { text-align:center; padding:40px 24px; font-size:13px; color:var(--forest); opacity:0.75; }
+footer .links { margin-bottom:14px; display:flex; gap:18px; justify-content:center; flex-wrap:wrap; }
+footer .links a { color:var(--forest); text-decoration:none; font-weight:500; }
+footer .links a:hover { text-decoration:underline; }
+
+@media (max-width:640px){
+  .topnav a { padding:8px 11px; font-size:13px; }
+  .shot { width:200px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Üst bar -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 8 L82 20 V46 C82 68 68 84 50 92 C32 84 18 68 18 46 V20 Z" stroke="#1F4D3A" stroke-width="6" fill="none"/>
+        <circle cx="50" cy="48" r="16" stroke="#1F4D3A" stroke-width="5" fill="none"/>
+        <circle cx="50" cy="48" r="6" fill="#1F4D3A"/>
+        <line x1="24" y1="48" x2="76" y2="48" stroke="#1F4D3A" stroke-width="3"/>
+      </svg>
+      Dizdar
+    </div>
+    <nav class="topnav">
+      <a href="./privacy.html">Gizlilik</a>
+      <a href="./terms.html">Şartlar</a>
+      <a href="./support.html">Destek</a>
+    </nav>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="badge">🎁 Ücretsiz ve reklamsız</div>
+    <h1>Çocuğunuzun okul anı,<br>artık cebinizde</h1>
+    <p class="tagline">Dizdar, çocuğunuz okula girdiğinde ya da çıktığında sizi anında haberdar eder. Saat, durum ve fotoğraf — hepsi tek dokunuşla.</p>
+    <div class="cta-row">
+      <a href="#indir" class="btn-primary">App Store'da yakında</a>
+      <a href="./support.html" class="btn-ghost">Nasıl çalışır?</a>
+    </div>
+  </div>
+</section>
+
+<!-- Ekran görüntüleri -->
+<section class="shots">
+  <div class="shots-grid">
+    <div class="shot">
+      <img src="./gorseller/Dizdar_03-kartlar.jpg" alt="Öğrenci kartları ekranı" loading="lazy">
+      <p>Tüm çocuklarınız tek ekranda</p>
+    </div>
+    <div class="shot">
+      <img src="./gorseller/Dizdar_04-detay.jpg" alt="Giriş çıkış detayı" loading="lazy">
+      <p>Giriş–çıkış saatleri</p>
+    </div>
+    <div class="shot">
+      <img src="./gorseller/Dizdar_05-fotograf.jpg" alt="Fotoğraflı doğrulama" loading="lazy">
+      <p>Fotoğraflı doğrulama</p>
+    </div>
+  </div>
+</section>
+
+<!-- Özellikler -->
+<section class="features">
+  <h2 class="section-title">Sade, hızlı, güvenli</h2>
+  <p class="section-sub">Hesap yok, şifre yok, reklam yok. Sadece içiniz rahat olsun diye.</p>
+  <div class="features-grid">
+    <div class="feature">
+      <div class="icon">⚡</div>
+      <h3>30 saniyede kurulum</h3>
+      <p>Okulun verdiği üç bilgiyi girin, hemen başlayın. E-posta veya hesap oluşturmaya gerek yok.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🔔</div>
+      <h3>Anlık bildirim</h3>
+      <p>Çocuğunuz okula girdiği ya da çıktığı anda telefonunuza bildirim gelir.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">📸</div>
+      <h3>Fotoğraflı doğrulama</h3>
+      <p>Giriş ve çıkış anının fotoğrafını görün. Kim, ne zaman, hangi durumda — net.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">👨‍👩‍👧‍👦</div>
+      <h3>Kardeşler bir arada</h3>
+      <p>Birden fazla çocuğunuzu tek ekrandan kolayca takip edin.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🔒</div>
+      <h3>Gizlilik önceliği</h3>
+      <p>Bilgileriniz yalnızca sizin telefonunuzda saklanır. KVKK'ya uygun, şifreli bağlantı.</p>
+    </div>
+    <div class="feature">
+      <div class="icon">🎁</div>
+      <h3>Tamamen ücretsiz</h3>
+      <p>Hiçbir ücret yok, reklam yok. Erişim kodunuzu okulunuzdan ücretsiz alırsınız.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Ücretsiz şerit -->
+<section class="free-band" id="indir">
+  <h2>Ücretsiz, reklamsız, gönül rahatlığı</h2>
+  <p>Dizdar yakında App Store'da. Çocuğunuzun erişim kodunu okulundan ücretsiz alabilirsiniz.</p>
+  <a href="./support.html" class="btn-primary">Daha fazla bilgi</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="links">
+    <a href="./privacy.html">Gizlilik Politikası</a>
+    <a href="./terms.html">Kullanım Şartları</a>
+    <a href="./support.html">Destek</a>
+    <a href="mailto:dizdarapp@gmail.com">İletişim</a>
+  </div>
+  © 2026 Dizdar. Tüm hakları saklıdır. · dizdarapp@gmail.com
+</footer>
+
+</body>
+</html>
