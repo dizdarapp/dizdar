@@ -1,90 +1,121 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dizdar — Gizlilik Politikası</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gizlilik Politikası — Dizdar</title>
 <style>
-:root { --forest:#1F4D3A; --forest-dark:#143528; --cream:#F5EDD6; --cream-light:#FAF4E0; --cream-muted:#E8DFC4; }
-* { box-sizing:border-box; }
-body { margin:0; padding:0; background:var(--cream); color:var(--forest-dark); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.65; }
-header { background:var(--forest); color:var(--cream); padding:48px 24px 32px; text-align:center; }
-header h1 { margin:8px 0 4px; font-size:28px; font-weight:600; letter-spacing:-0.3px; }
-header p { margin:0; opacity:0.8; font-size:14px; }
-.amblem { font-size:32px; opacity:0.95; }
-.wrap { max-width:780px; margin:0 auto; padding:32px 24px 80px; }
-h2 { color:var(--forest); font-size:20px; font-weight:600; margin-top:36px; margin-bottom:12px; letter-spacing:-0.2px; }
-h3 { color:var(--forest); font-size:16px; font-weight:600; margin-top:24px; margin-bottom:8px; }
-p,li { font-size:15px; }
-ul,ol { padding-left:22px; }
-li { margin-bottom:6px; }
-strong { color:var(--forest-dark); }
-a { color:var(--forest); }
-hr { border:0; border-top:1px solid var(--cream-muted); margin:32px 0; }
-footer { text-align:center; padding:24px; font-size:13px; color:var(--forest); opacity:0.7; border-top:1px solid var(--cream-muted); }
-.nav { text-align:center; margin-top:20px; }
-.nav a { display:inline-block; margin:0 6px; color:var(--cream); text-decoration:none; padding:6px 14px; border:1px solid rgba(245,237,214,0.3); border-radius:999px; font-size:13px; }
-.nav a:hover { background:rgba(245,237,214,0.1); }
+  :root {
+    --zemin: #F4F0E3; --kart: #FBF8EF; --metin: #1F2B25;
+    --yesil: #1B4A38; --soluk: #5E6B63; --cizgi: #DDD6C3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --zemin: #121A16; --kart: #1A241F; --metin: #E9E5D8;
+      --yesil: #8FC4A8; --soluk: #A3ADA7; --cizgi: #2C3A33;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--zemin); color: var(--metin);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: env(safe-area-inset-top, 0) 0 env(safe-area-inset-bottom, 0);
+  }
+  main {
+    max-width: 760px; margin: 32px auto; padding: 36px 28px;
+    background: var(--kart); border: 1px solid var(--cizgi); border-radius: 20px;
+  }
+  .marka { color: var(--yesil); font-weight: 700; letter-spacing: .14em; font-size: 13px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 18px; }
+  h2 { color: var(--yesil); font-size: 20px; margin: 34px 0 8px; }
+  h3 { font-size: 16px; margin: 22px 0 6px; }
+  p, li { color: var(--metin); }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  a { color: var(--yesil); }
+  hr { border: 0; border-top: 1px solid var(--cizgi); margin: 28px 0; }
+  nav { max-width: 760px; margin: 0 auto; padding: 18px 28px 0; font-size: 14px; }
+  nav a { margin-right: 18px; text-decoration: none; }
+  footer { text-align: center; color: var(--soluk); font-size: 13px; padding: 0 20px 32px; }
+  @media (max-width: 600px) { main { margin: 16px 10px; padding: 26px 18px; } h1 { font-size: 25px; } }
 </style>
 </head>
 <body>
-<header>
-  <div class="amblem">🛡️</div>
-  <h1>Dizdar</h1>
-  <p>Gizlilik Politikası — son güncelleme 11 Haziran 2026</p>
-  <div class="nav">
-    <a href="./index.html">Ana sayfa</a>
-    <a href="./terms.html">Kullanım Şartları</a>
-    <a href="./privacy.html">Gizlilik</a>
-    <a href="./support.html">Destek</a>
-  </div>
-</header>
-<div class="wrap">
-<p><strong>Son güncelleme:</strong> 11 Haziran 2026</p>
-<p>Bu Gizlilik Politikası, <strong>Dizdar</strong> uygulamasını kullanırken bilgilerinizin nasıl işlendiğini açık ve anlaşılır bir dille anlatır. Uygulama, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) ilkelerine uygun olarak hazırlanmıştır.</p>
-<p>Dizdar, çocuğunuzun okula giriş ve çıkışlarını velilerin takip edebilmesi için tasarlanmış, <strong>tamamen ücretsiz ve reklamsız</strong> bir aile uygulamasıdır. Gizliliğinize değer veriyoruz ve uygulamayı <strong>mümkün olan en az bilgiyi</strong> işleyecek şekilde tasarladık.</p>
-<h2>1. Bu Politikadan Kim Sorumlu?</h2>
+<nav><a href="privacy.html">Gizlilik Politikası</a><a href="terms.html">Kullanım Şartları</a></nav>
+<main>
+<div class="marka">DİZDAR</div>
+<h1>Gizlilik Politikası</h1>
+<p><strong>Son güncelleme:</strong> 21 Eylül 2026</p>
+<p>Bu Gizlilik Politikası, <strong>Dizdar</strong> uygulamasını kullanırken bilgilerinizin nasıl işlendiğini açıklar. Politika, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) ilkeleri gözetilerek hazırlanmıştır.</p>
+<p>Dizdar; okulların giriş–çıkış sistemini velilerin, öğretmenlerin ve okul yönetiminin takip edebilmesini sağlayan <strong>ücretsiz ve reklamsız</strong> bir uygulamadır. Uygulama <strong>mümkün olan en az bilgiyi</strong> işleyecek şekilde tasarlanmıştır.</p>
+<h2>1. Sorumlular</h2>
 <ul>
-<li><strong>Geliştirici:</strong> Ali ÇINAR</li>
-<li><strong>İletişim:</strong> dizdarapp@gmail.com</li>
+<li><strong>Geliştirici:</strong> Ali ÇINAR — <a href="mailto:dizdarapp@gmail.com">dizdarapp@gmail.com</a></li>
+<li><strong>Öğrenci kayıtlarının veri sorumlusu:</strong> Öğrencinin kayıtlı olduğu okuldur. Giriş–çıkış kayıtlarını, öğrenci listelerini ve okul girişindeki cihazı okul yönetir. Dizdar bu kayıtları okul adına ve okulun talimatıyla gösterir.</li>
 </ul>
-<p>Sorularınız veya talepleriniz için her zaman bu adresten bize ulaşabilirsiniz.</p>
-<h2>2. Hangi Bilgileri İşliyoruz?</h2>
-<h3>2.1 Sizin Girdiğiniz Bilgiler</h3>
-<p>Çocuğunuzun kartını oluştururken üç bilgi girersiniz: kurum (okul) kodu, öğrenci numarası ve öğrenci erişim kodu. Bu bilgiler yalnızca çocuğunuzu tanımlamak ve doğru kayıtları getirmek için kullanılır ve <strong>yalnızca sizin telefonunuzda</strong> saklanır.</p>
-<h3>2.2 Çocuğunuza Ait Görüntülediğiniz Bilgiler</h3>
-<p>Uygulamada gördüğünüz giriş–çıkış saatleri, durum bilgisi ve fotoğraflar okul tarafından oluşturulur. Dizdar bu bilgileri yalnızca size <strong>gösterir</strong>; oluşturmaz veya değiştirmez. Bu kayıtlar okulun kendi sistemine aittir.</p>
-<h3>2.3 Bildirim Bilgisi</h3>
-<p>Bildirimlere izin verirseniz, telefonunuza ait bir bildirim adresi oluşturulur. Bu adres, yalnızca çocuğunuz okula girdiğinde veya çıktığında size haber gönderebilmek için kullanılır ve kimliğinizi açığa çıkarmaz.</p>
-<h3>2.4 Uygulama Geliştirme Bilgileri</h3>
-<p>Uygulamayı iyileştirebilmek için, kimliğinizi belli etmeyen genel kullanım bilgileri (örneğin uygulamanın açılma sayısı) toplanır. Bu bilgiler sizi tanımlamaz, reklam için kullanılmaz, satılmaz ve kimseyle paylaşılmaz.</p>
-<h2>3. Bilgileriniz Nerede Saklanır?</h2>
+<h2>2. Uygulamanın Bölümleri</h2>
+<p>Uygulama üç bölümden oluşur. Her bölüm yalnızca kendi işi için gereken bilgiyi kullanır.</p>
 <ul>
-<li>Çocuğunuzun kart bilgileri <strong>yalnızca telefonunuzda</strong> saklanır.</li>
-<li>Giriş–çıkış kayıtları ve fotoğraflar okulun güvenli sisteminde tutulur ve uygulama bunları yalnızca siz görüntülediğinizde getirir.</li>
-<li>Tüm bağlantılar şifreli olarak yapılır.</li>
+<li><strong>Veli:</strong> Çocuğunun okula giriş–çıkışını görüntüler, isterse bildirim alır.</li>
+<li><strong>Öğretmen:</strong> Kendisine atanan sınıfların yoklamasını görüntüler.</li>
+<li><strong>Kurum (okul yönetimi):</strong> Öğrenci ve öğretmen listelerini, yoklamayı, duyuruları ve okul girişindeki cihazın ayarlarını yönetir.</li>
 </ul>
-<h2>4. Bilgileriniz Ne Kadar Süre Saklanır?</h2>
-<p>Kart bilgileriniz, siz silene ya da uygulamayı kaldırana kadar telefonunuzda kalır.</p>
-<h2>5. Verilerinizi Silme Hakkınız</h2>
-<p>Dilediğiniz zaman:</p>
+<h2>3. Hangi Bilgileri İşliyoruz?</h2>
+<h3>3.1 Veli bölümü</h3>
 <ul>
-<li>Tek bir kartı silebilirsiniz. Bu işlem, o çocuğa ait giriş–çıkış kayıtlarını ve fotoğrafları bulut kopyasından da temizler. (Okulun kendi ana kaydı etkilenmez.)</li>
-<li><strong>Ayarlar > Tüm verileri sil</strong> seçeneğiyle uygulamadaki tüm kartlarınızı ve bunlara ait bulut kayıtlarını silebilirsiniz.</li>
-<li>Uygulamayı telefonunuzdan kaldırarak yerel tüm bilgileri silebilirsiniz.</li>
+<li><strong>Kart bilgileri:</strong> Kurum kodu, öğrenci numarası ve erişim kodu. Yalnızca <strong>telefonunuzda</strong> saklanır.</li>
+<li><strong>Görüntülenen kayıtlar:</strong> Giriş–çıkış saatleri, durum bilgisi ve giriş anında çekilen fotoğraf. Bu kayıtları okul sistemi oluşturur; uygulama yalnızca gösterir.</li>
+<li><strong>Bildirim adresi:</strong> Bildirimlere izin verirseniz telefonunuza ait bir bildirim adresi, çocuğunuzun kaydıyla eşleştirilerek saklanır. Yalnızca giriş–çıkış bildirimi göndermek için kullanılır. Ayarlardan bildirimi kapattığınızda gönderim durur.</li>
 </ul>
-<p>Ek talepleriniz için dizdarapp@gmail.com adresine yazabilirsiniz.</p>
-<h2>6. Çocukların Gizliliği</h2>
-<p>Bu uygulama velilere yöneliktir. Çocuğa ait bilgileri yalnızca o çocuğun velisi, okuldan aldığı erişim koduyla görüntüleyebilir. Erişim kodu olmadan hiç kimse bu bilgilere ulaşamaz.</p>
-<h2>7. KVKK Kapsamındaki Haklarınız</h2>
-<p>KVKK'nın 11. maddesi uyarınca; işlenen verileriniz hakkında bilgi talep etme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahipsiniz. Bu haklarınızı kullanmak için dizdarapp@gmail.com adresine başvurabilirsiniz. Başvurularınız en geç 30 gün içinde yanıtlanır.</p>
-<h2>8. Güvenlik</h2>
-<p>Bilgilerinizi korumak için makul teknik ve idari önlemler alıyoruz. Bağlantılar şifrelenir ve erişim, yalnızca doğru kodu giren velilerle sınırlıdır.</p>
+<h3>3.2 Öğretmen ve kurum bölümü</h3>
+<ul>
+<li><strong>Hesap bilgileri:</strong> Ad soyad, branş, unvan (müdür, müdür yardımcısı, öğretmen) ve atanan sınıflar. Bu bilgileri okul yönetimi girer.</li>
+<li><strong>Şifre:</strong> Şifreniz <strong>düz metin olarak hiçbir yerde saklanmaz</strong>; yalnızca geri çevrilemeyen bir özeti tutulur.</li>
+<li><strong>Cihaz kimliği:</strong> Hesabınız, telefonunuza özel ve kimliğinizi açığa çıkarmayan rastgele bir kimlikle eşleştirilir. Bu sayede hesabınız yalnızca bağlandığınız telefonda açılır.</li>
+</ul>
+<h3>3.3 Okul girişindeki cihaz ve yüz tanıma</h3>
+<p>Okul girişinde bulunan tablet, öğrencileri kart (QR) veya yüz tanıma ile tanır. Bu cihaz okul tarafından işletilir.</p>
+<ul>
+<li><strong>Yüz tanıma verisi:</strong> Yüz tanıma kullanılıyorsa, her öğrenci için yüzden türetilmiş sayısal bir şablon oluşturulur. Bu şablon <strong>yalnızca okul girişindeki cihazda, şifrelenmiş olarak</strong> saklanır; buluta gönderilmez, veli veya öğretmen telefonlarına indirilmez. Şablondan fotoğraf geri üretilemez.</li>
+<li><strong>Giriş–çıkış fotoğrafı:</strong> Geçiş anında küçük bir fotoğraf çekilir ve veliye gösterilmek üzere okulun bulut alanına yüklenir. Bu fotoğraflar <strong>7 gün sonra otomatik olarak silinir.</strong></li>
+<li>Yüz tanımanın kullanılıp kullanılmayacağına okul karar verir ve okul, velilerden gerekli <strong>açık rızayı</strong> almakla yükümlüdür. Okul yönetimi bir öğrencinin yüz tanıma verisini uygulama üzerinden istediği an silebilir.</li>
+</ul>
+<h3>3.4 Yalnızca telefonunuzda kalan bilgiler</h3>
+<ul>
+<li><strong>Hatırlatmalar:</strong> Akış ekranında oluşturduğunuz hatırlatmalar yalnızca telefonunuzda saklanır, hiçbir sunucuya gönderilmez.</li>
+<li><strong>Haber konumu:</strong> Milli eğitim haberleri için seçtiğiniz il ve ilçe yalnızca telefonunuzda tutulur. Haberler Milli Eğitim Bakanlığı'nın herkese açık haber akışından okunur; bu sırada sizinle ilgili hiçbir bilgi gönderilmez.</li>
+</ul>
+<h3>3.5 Uygulama geliştirme bilgileri</h3>
+<p>Uygulamayı iyileştirmek için kimliğinizi belli etmeyen genel kullanım bilgileri (örneğin günlük açılma sayısı) toplanabilir. Bu bilgiler sizi tanımlamaz, reklam için kullanılmaz, satılmaz ve paylaşılmaz.</p>
+<h2>4. Bilgiler Nerede Saklanır?</h2>
+<ul>
+<li>Bulutta tutulan kayıtlar, <strong>Avrupa Birliği</strong> bölgesinde bulunan güvenli sunucularda saklanır.</li>
+<li>Bildirimler, telefonunuzun işletim sisteminin bildirim servisi üzerinden iletilir.</li>
+<li>Tüm bağlantılar şifrelidir. Erişim kurallarıyla, öğretmen yalnızca kendi sınıflarını, veli yalnızca kendi çocuğunun kaydını görebilir.</li>
+</ul>
+<h2>5. Saklama Süreleri</h2>
+<ul>
+<li>Giriş–çıkış fotoğrafları: <strong>7 gün</strong>, sonra otomatik silinir.</li>
+<li>Veli kart bilgileri: Siz silene veya uygulamayı kaldırana kadar telefonunuzda.</li>
+<li>Öğretmen ve kurum hesapları: Hesap silinene veya okul tarafından kaldırılana kadar.</li>
+<li>Giriş–çıkış kayıtları: Okulun belirlediği süre boyunca okul sisteminde.</li>
+</ul>
+<h2>6. Silme Hakkınız</h2>
+<ul>
+<li><strong>Veli:</strong> Bir kartı silebilir veya <strong>Ayarlar › Tüm verileri sil</strong> ile tüm kartları silebilirsiniz. Kart silindiğinde telefondaki bilgiler, bildirim kaydı ve çocuğunuza ait <strong>giriş–çıkış fotoğrafları</strong> silinir; güvenlik için erişim kodu da iptal edilir. Giriş–çıkış <strong>kayıtları</strong> okula aittir ve okulun yoklama sisteminin parçası olduğu için silinmez; bu kayıtlarla ilgili talepleri okula iletebilirsiniz.</li>
+<li><strong>Öğretmen ve kurum:</strong> <strong>Ayarlar › Hesabımı Sil</strong> ile hesabınızı ve telefonunuzun okulla bağlantısını kalıcı olarak silebilirsiniz.</li>
+<li><strong>Yüz tanıma verisi:</strong> Okul yönetimi siler. Veliler bu talebi okula iletebilir.</li>
+</ul>
+<p>Ek talepleriniz için <a href="mailto:dizdarapp@gmail.com">dizdarapp@gmail.com</a> adresine yazabilirsiniz.</p>
+<h2>7. Çocukların Gizliliği</h2>
+<p>Uygulama çocuklara değil; velilere, öğretmenlere ve okul yönetimine yöneliktir. Bir çocuğa ait kayıtları yalnızca okuldan erişim kodu alan velisi ve o sınıfa atanmış öğretmenler ile okul yönetimi görebilir. Çocuğa ait bilgiler reklam veya profil oluşturma amacıyla kullanılmaz.</p>
+<h2>8. KVKK Kapsamındaki Haklarınız</h2>
+<p>KVKK'nın 11. maddesi uyarınca; verileriniz hakkında bilgi talep etme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahipsiniz. Öğrenci kayıtlarıyla ilgili talepler için öncelikle okulunuza, uygulamayla ilgili talepler için <a href="mailto:dizdarapp@gmail.com">dizdarapp@gmail.com</a> adresine başvurabilirsiniz. Başvurular en geç 30 gün içinde yanıtlanır.</p>
 <h2>9. Değişiklikler</h2>
-<p>Bu politikada değişiklik yaptığımızda, güncel sürümü uygulama içinde yayınlarız ve "Son güncelleme" tarihini değiştiririz.</p>
+<p>Bu politikada değişiklik yapıldığında güncel sürüm uygulama içinde yayınlanır ve "Son güncelleme" tarihi değiştirilir.</p>
 <h2>10. İletişim</h2>
-<p>Her türlü soru, talep ve geri bildiriminiz için: <strong>dizdarapp@gmail.com</strong></p>
-</div>
-<footer>© 2026 Dizdar · dizdarapp@gmail.com</footer>
+<p><strong><a href="mailto:dizdarapp@gmail.com">dizdarapp@gmail.com</a></strong></p>
+</main>
+<footer>© 2026 Dizdar · <a href="mailto:dizdarapp@gmail.com">dizdarapp@gmail.com</a></footer>
 </body>
 </html>
