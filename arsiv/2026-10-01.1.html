@@ -57,7 +57,7 @@ Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu&#x27;nun (KVKK) 10.
 
 1. TARAFLAR VE ROLLER
 • Veri sorumlusu: Öğrencinin kayıtlı olduğu OKUL (kurum). Giriş–çıkış sisteminin kullanılmasına, hangi yöntemin (kart ya da yüz tanıma) uygulanacağına ve kayıtların amacına okul karar verir.
-• Veri işleyen: DİZDAR (geliştirici: Ali ÇINAR). DİZDAR yalnızca okulun talimatıyla, okul adına teknik hizmet sağlar; verileri kendi amacı için kullanmaz, satmaz, reklam için işlemez.
+• Veri işleyen: DİZDAR. DİZDAR yalnızca okulun talimatıyla, okul adına teknik hizmet sağlar; verileri kendi amacı için kullanmaz, satmaz, reklam için işlemez.
 • Veli: Kendi ve çocuğuna ait izinleri verir, değiştirir ve geri çeker.
 
 2. İŞLENEN VERİLER
@@ -65,6 +65,7 @@ Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu&#x27;nun (KVKK) 10.
 • Veli: uygulamanın rastgele cihaz kimliği, bildirim adresi (izin verilirse), künyede okulun girdiği ad soyad, telefon ve yakınlık bilgisi.
 • Yüz tanıma şablonu (yalnızca veli açık rıza verirse): yüzden türetilen sayısal imza. Yalnızca okul girişindeki cihazda, cihaza özel anahtarla ŞİFRELİ tutulur; sunucuya, öğretmen ya da veli telefonlarına gönderilmez. Şablondan fotoğraf geri üretilemez.
 • Geçiş fotoğrafı (yalnızca veli açık rıza verirse ve yalnızca yüz tanıma izni açıkken): okul girişindeki cihazda şifreli tutulur. Yalnızca veli uygulamada istediğinde ve her veliye BİR KEZ gösterilir. Fotoğraf sunucuda kalıcı olarak saklanmaz; gösterim için birkaç saniyeliğine aktarılır ve hemen silinir. Hiç istenmeyen fotoğraflar en geç aynı günün sonunda (yeni gün başlarken) kalıcı olarak silinir.
+• Geçiş fotoğrafı neden yalnızca yüz tanımada var? Kartla geçişte kartı okutan öğrencinin yanında ya da arkasında başka öğrenciler veya kişiler bulunabilir; o anda çekilecek bir fotoğrafta kartı kimin okuttuğunu güvenilir biçimde ayırt etmek dijital olarak mümkün değildir. Bu nedenle kartla geçişte fotoğraf çekilmez ve veliye gönderilmez. Yüz tanımada ise sistem öğrencinin yüzünü algılayıp tanıdığı anda fotoğraf alır; fotoğraf tanınan yüze göre vesikalık biçiminde kırpılır, yüzün dışında kalan kenarlar maskelenir ve yandaki diğer kişilerin yüzleri gösterilmez.
 • Onay ve izin kayıtları: kim, ne zaman, hangi metin sürümüne onay verdi; hangi izni kim açtı ya da kapattı.
 • Google Play e-posta adresi (yalnızca Android erken erişime katılmak isteyenler): bkz. madde 8.
 
@@ -84,7 +85,7 @@ Yüz tanıma, okul ile velinin ortak kararıyla ve yalnızca velinin açık rız
 
 6. OTOMATİK SİSTEMİN SINIRLARI — HATA OLABİLİR
 Giriş–çıkış kaydı, yüz tanıma ve geçiş fotoğrafı, okul girişindeki cihazda otomatik çalışan bir sistemle yapılır ve her otomatik sistem gibi hata yapabilir:
-• Kamera kadrajında çocuğunuzun yanında başka öğrenciler veya kişiler görünebilir.
+• Fotoğraf tanınan yüze göre kırpılıp kenarları maskelense de, otomatik bir sistem olduğu için kadrajda yandaki kişilerin bir kısmı görünebilir.
 • Sistem yanlışlıkla başka bir öğrencinin fotoğrafını çekip kaydedebilir, fotoğrafları ya da öğrencileri birbirine karıştırabilir ve bir fotoğrafı yanlışlıkla başka bir veliye gösterebilir.
 • Giriş–çıkış kaydı gecikebilir, hiç oluşmayabilir ya da yanlış öğrenciye yazılabilir.
 DİZDAR, yasaların izin verdiği ölçüde, bu tür hatalardan ve sonuçlarından sorumluluk kabul etmez. Uygulamada gördüğünüz kayıt ve fotoğraflar yalnızca bilgilendirme amaçlıdır; kesin bilgi için okulla iletişime geçin. Size başka bir çocuğa ait bir fotoğraf veya kayıt gösterilirse onu kaydetmemeli, ekran görüntüsünü almamalı, kimseyle paylaşmamalı ve durumu okula bildirmelisiniz.
@@ -129,7 +130,7 @@ Sürüm 1 · 01.10.2026
 • VELİ: izinleri kendi iradesiyle verir, değiştirir, geri çeker; erişim kodunu kimseyle paylaşmaz; uygulamayı yalnızca kendi çocuğu için kullanır.
 • DİZDAR (veri işleyen): okulun talimatıyla teknik hizmeti sağlar, verileri güvenli tutar, kendi amacı için kullanmaz. Yüz tanımanın uygulanmasına ilişkin karar ve rıza süreçleri okul ile veliye aittir; DİZDAR bu kararların sorumluluğunu üstlenmez ve her durumda yüz tanımaya gerek kalmadan çalışan KART sistemini sunar.
 
-4. Otomatik sistem hata yapabilir: Giriş–çıkış kaydı, yüz tanıma ve geçiş fotoğrafı otomatik çalışan bir sistemle yapılır. Kamera kadrajında başka öğrenciler veya kişiler görünebilir; sistem yanlışlıkla başka bir öğrencinin fotoğrafını çekip kaydedebilir, fotoğrafları ya da öğrencileri birbirine karıştırabilir, bir fotoğrafı yanlışlıkla başka bir veliye gösterebilir; giriş–çıkış kaydı gecikebilir, oluşmayabilir ya da yanlış öğrenciye yazılabilir. Uygulamadaki kayıt ve fotoğraflar yalnızca bilgilendirme amaçlıdır; kesin bilgi için okulla iletişime geçilmelidir. Başkasına ait bir fotoğraf veya kayıt gören kişi onu kaydetmez, ekran görüntüsünü almaz, paylaşmaz ve okula bildirir.
+4. Otomatik sistem hata yapabilir: Giriş–çıkış kaydı, yüz tanıma ve geçiş fotoğrafı otomatik çalışan bir sistemle yapılır. Geçiş fotoğrafı yalnızca yüz tanımada alınır; kartla geçişte, kartı okutanın yanında başka kişiler bulunabileceği ve kimin okuttuğu fotoğraftan güvenilir biçimde ayırt edilemeyeceği için fotoğraf çekilmez. Yüz tanımada fotoğraf tanınan yüze göre kırpılır, yüzün dışındaki kenarlar maskelenir ve diğer kişilerin yüzleri gösterilmez; buna rağmen kadrajda yandaki kişilerin bir kısmı görünebilir; sistem yanlışlıkla başka bir öğrencinin fotoğrafını çekip kaydedebilir, fotoğrafları ya da öğrencileri birbirine karıştırabilir, bir fotoğrafı yanlışlıkla başka bir veliye gösterebilir; giriş–çıkış kaydı gecikebilir, oluşmayabilir ya da yanlış öğrenciye yazılabilir. Uygulamadaki kayıt ve fotoğraflar yalnızca bilgilendirme amaçlıdır; kesin bilgi için okulla iletişime geçilmelidir. Başkasına ait bir fotoğraf veya kayıt gören kişi onu kaydetmez, ekran görüntüsünü almaz, paylaşmaz ve okula bildirir.
 
 5. Sorumluluğun sınırı: Yasaların izin verdiği ölçüde DİZDAR; otomatik sistemin yukarıdaki hatalarından (yanlış fotoğrafın çekilmesi, kaydedilmesi, karıştırılması ya da yanlış kişiye gösterilmesi dahil), bildirimlerin gecikmesinden ya da ulaşmamasından, okulun girdiği bilgilerin yanlışlığından, internet/sunucu kesintilerinden, uygulamanın geçici ya da kalıcı olarak çalışmamasından ve yalnızca uygulamaya güvenilmesinden doğan zararlardan sorumlu tutulamaz ve bunlar için sorumluluk kabul etmez. Bu sınırlama, kanunun kaldırılmasına izin vermediği sorumlulukları ortadan kaldırmaz.
 
@@ -175,10 +176,12 @@ Velisi olduğum öğrencinin okula giriş–çıkış anında fotoğrafının ç
 
 Biliyorum ki:
 • Geçiş fotoğrafı yalnızca yüz tanıma izni açıkken verilebilir; yüz tanıma izni kapatılırsa fotoğraf izni de kendiliğinden kapanır.
+• Kartla geçişte fotoğraf çekilmez: kartı okutan öğrencinin yanında başka öğrenciler veya kişiler bulunabileceğinden, kartı kimin okuttuğunu fotoğraftan güvenilir biçimde ayırt etmek mümkün değildir.
+• Yüz tanımada fotoğraf, sistem çocuğumun yüzünü tanıdığı anda alınır; tanınan yüze göre vesikalık biçiminde kırpılır, yüzün dışında kalan kenarlar maskelenir ve yandaki diğer kişilerin yüzleri gösterilmez.
 • Fotoğraf yalnızca veli istediğinde ve her veliye BİR KEZ gösterilir; gösterim için birkaç saniyeliğine sunucudan geçer ve hemen silinir.
 • Hiç istenmeyen fotoğraflar en geç aynı günün sonunda kalıcı olarak silinir.
 • Rızamı istediğim an geri çekebilirim; geri çektiğimde fotoğraf çekimi durur.
-• Fotoğraf otomatik çekilir ve sistem hata yapabilir: kadrajda başka öğrenciler veya kişiler görünebilir; sistem yanlışlıkla başka bir öğrencinin fotoğrafını çekip kaydedebilir, fotoğrafları karıştırabilir ya da bana başkasına ait bir fotoğraf gösterebilir. DİZDAR, yasaların izin verdiği ölçüde, bu tür hatalardan sorumluluk kabul etmez.
+• Fotoğraf otomatik çekilir ve sistem hata yapabilir: kırpma ve maskelemeye rağmen kadrajda yandaki kişilerin bir kısmı görünebilir; sistem yanlışlıkla başka bir öğrencinin fotoğrafını çekip kaydedebilir, fotoğrafları karıştırabilir ya da bana başkasına ait bir fotoğraf gösterebilir. DİZDAR, yasaların izin verdiği ölçüde, bu tür hatalardan sorumluluk kabul etmez.
 • Bana başka bir çocuğa ait fotoğraf gösterilirse onu kaydetmeyeceğim, ekran görüntüsünü almayacağım, kimseyle paylaşmayacağım ve okula bildireceğim.
 • Bu onayım kayda geçirilir ve süresiz saklanır.</pre>
 <h2>Kurum Taahhütnamesi</h2>
@@ -213,10 +216,10 @@ DİZDAR sistemini okulumun yetkilendirdiği personel olarak kullanırken:
 6. Giriş–çıkış kaydı, yüz tanıma ve geçiş fotoğrafının otomatik çalıştığını ve hata yapabileceğini; sistemin yanlışlıkla başka bir öğrencinin fotoğrafını kaydedebileceğini veya öğrencileri karıştırabileceğini, DİZDAR&#x27;ın bu hatalardan sorumluluk kabul etmediğini; başka bir öğrenciye ait yanlış bir kayıt ya da fotoğraf görürsem onu paylaşmayacağımı ve okul yönetimine bildireceğimi,
 7. Android erken erişim istersem Google Play e-posta adresimin, Google&#x27;ın standart erken erişim prosedürü gereği Google Play Console&#x27;daki listeye kaydedileceğini ve yalnızca erken erişim hakkı vermek için kullanılacağını; adresimi istediğim zaman sildirme ve erken erişimden çıkma hakkım olduğunu; e-posta vermek istemezsem uygulamanın Google Play&#x27;de herkese açık yayımlanmasını beklemem gerektiğini,
 kabul ve taahhüt ederim.</pre>
-<h3>Veli onay kutuları</h3><ul><li>☐ Aydınlatma Metni&#x27;ni okudum ve anladım.</li><li>☐ Kullanım Şartları&#x27;nı kabul ediyorum.</li><li>☐ Kayıtların Avrupa Birliği bölgesindeki bulut sunucularında tutulmasına ve işlenmesine açık rıza veriyorum.</li></ul>
+<h3>Veli onay kutuları</h3><ul><li>☐ Aydınlatma Metni&#x27;ni okudum ve anladım.</li><li>☐ Kullanım Şartları&#x27;nı kabul ediyorum.</li></ul>
 <h3>Kurum onay kutuları</h3><ul><li>☐ Kurum Taahhütnamesi&#x27;ni okudum; okulum adına kabul ve taahhüt ediyorum.</li><li>☐ Kullanım Şartları&#x27;nı kabul ediyorum.</li></ul>
 <h3>Öğretmen onay kutuları</h3><ul><li>☐ Personel Taahhütnamesi&#x27;ni okudum; kabul ve taahhüt ediyorum.</li><li>☐ Kullanım Şartları&#x27;nı kabul ediyorum.</li></ul>
-<h2>Parmak izleri (SHA-256)</h2><ul><li>Veli onayı (aydınlatma + şartlar + kutular): <code>35601778ed09e30418cd8081661683b6032cef57cc66aa2975dc5fc9df964027</code></li><li>Kurum onayı (taahhütname + şartlar + kutular): <code>3341c52ae1456924d3c9c8643d8cec0f3725b3c418409871b0cece1104c8e1c1</code></li><li>Öğretmen onayı (taahhütname + şartlar + kutular): <code>ad9d6edfb3849fcbaa8b5dfba9d1f0f0a8be15456954f49b8fb8873cb7dbfd7b</code></li><li>Yüz tanıma açık rızası: <code>d4a9b01bc8f773b8bdd20a0c1c98df26cde884f85e78d9ed6de99d42870b19c0</code></li><li>Geçiş fotoğrafı açık rızası: <code>f1e71821ddf6d78b750edc3fb260d29c8e72081a300b2ae96eae0e0904d6e9c8</code></li></ul>
+<h2>Parmak izleri (SHA-256)</h2><ul><li>Veli onayı (aydınlatma + şartlar + kutular): <code>0d378b933b10a8982fec27ab3fa10a810c0250aa1bbebcfca4cfe5ef42de8650</code></li><li>Kurum onayı (taahhütname + şartlar + kutular): <code>590bd61a24cb42c21f15fda83e649ad81670000d2a23cd6178b7909c69296caa</code></li><li>Öğretmen onayı (taahhütname + şartlar + kutular): <code>76c6f917588cd0336fe4e8929f4cdc4d3515d27f2da6b8045bccf90caf2c7a0b</code></li><li>Yüz tanıma açık rızası: <code>d4a9b01bc8f773b8bdd20a0c1c98df26cde884f85e78d9ed6de99d42870b19c0</code></li><li>Geçiş fotoğrafı açık rızası: <code>aa1d6eee52e13b28996e6f3d6938a83922bdaf03c804263d8c7c1b79c76eeb51</code></li></ul>
 </main>
 <footer>© 2026 Dizdar · <a href="mailto:dizdarapp@gmail.com">dizdarapp@gmail.com</a></footer>
 </body>

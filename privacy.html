@@ -51,7 +51,7 @@
 <h2>1. Taraflar ve Roller</h2>
 <ul>
 <li><strong>Veri sorumlusu — OKUL (kurum):</strong> Öğrencinin kayıtlı olduğu okuldur. Giriş–çıkış sisteminin kullanılmasına, hangi yöntemin (kart ya da yüz tanıma) uygulanacağına ve kayıtların amacına okul karar verir. Velileri aydınlatmak ve gerekli açık rızaları almak okulun yükümlülüğüdür.</li>
-<li><strong>Veri işleyen — DİZDAR (geliştirici: Ali ÇINAR):</strong> Okulun talimatıyla, okul adına teknik hizmet sağlayan <strong>uygulayıcıdır</strong>. Verileri kendi amacı için kullanmaz, satmaz, reklam veya profil oluşturma için işlemez.</li>
+<li><strong>Veri işleyen — DİZDAR:</strong> Okulun talimatıyla, okul adına teknik hizmet sağlayan <strong>uygulayıcıdır</strong>. Verileri kendi amacı için kullanmaz, satmaz, reklam veya profil oluşturma için işlemez.</li>
 <li><strong>Veli:</strong> Kendi ve çocuğuna ait izinleri uygulamadan verir, değiştirir ve geri çeker.</li>
 <li><strong>Öğretmen ve kurum personeli:</strong> Okulun yetkilendirdiği kişilerdir; yalnız görevleri ölçüsünde erişir.</li>
 </ul>
@@ -78,6 +78,7 @@
 <li><strong>Kart (karekod):</strong> her öğrenci için her zaman kullanılabilir.</li>
 <li><strong>Yüz tanıma şablonu (biyometrik veri) — yalnız velinin açık rızasıyla:</strong> yüzden türetilen sayısal imzadır. <strong>Yalnız okul girişindeki cihazda, cihaza özel anahtarla şifreli</strong> tutulur; sunucuya, öğretmen ya da veli telefonlarına <strong>gönderilmez</strong>. Şablondan fotoğraf geri üretilemez. Fotoğraf saklanmaz.</li>
 <li><strong>Geçiş fotoğrafı — yalnız velinin açık rızasıyla ve yalnız yüz tanıma izni açıkken:</strong> okul girişindeki cihazda şifreli tutulur. Yüz tanıma izni kapatılırsa fotoğraf izni de kendiliğinden kapanır. <strong>Sunucuda saklanmaz.</strong> Veli uygulamada istediğinde, <strong>her veliye yalnız bir kez</strong> gösterilir; gösterim için birkaç saniyeliğine sunucudan geçer ve hemen silinir. Hiç istenmeyen fotoğraflar <strong>en geç aynı günün sonunda</strong> kalıcı olarak silinir. Fotoğraf telefona kaydedilmez.</li>
+<li><strong>Neden yalnızca yüz tanımada?</strong> Kartla geçişte kartı okutan öğrencinin yanında ya da arkasında başka öğrenciler veya kişiler bulunabilir; o anda çekilecek bir fotoğrafta kartı kimin okuttuğunu güvenilir biçimde ayırt etmek dijital olarak mümkün değildir. Bu nedenle <strong>kartla geçişte fotoğraf çekilmez</strong> ve veliye gönderilmez. Yüz tanımada ise fotoğraf, sistem öğrencinin yüzünü tanıdığı anda alınır; <strong>tanınan yüze göre vesikalık biçiminde kırpılır, yüzün dışında kalan kenarlar maskelenir</strong> ve yandaki diğer kişilerin yüzleri gösterilmez.</li>
 </ul>
 <h3>3.4 Onay, izin ve erişim kayıtları</h3>
 <ul>
@@ -117,7 +118,7 @@
 <h2>7. Otomatik Sistemin Sınırları — Hata Olabilir</h2>
 <p>Giriş–çıkış kaydı, yüz tanıma ve geçiş fotoğrafı, okul girişindeki cihazda otomatik çalışan bir sistemle yapılır ve her otomatik sistem gibi hata yapabilir:</p>
 <ul>
-<li>Kamera kadrajında öğrencinin yanında <strong>başka öğrenciler veya kişiler</strong> görünebilir.</li>
+<li>Fotoğraf tanınan yüze göre kırpılıp kenarları maskelense de, kadrajda yandaki <strong>kişilerin bir kısmı</strong> görünebilir.</li>
 <li>Sistem yanlışlıkla <strong>başka bir öğrencinin fotoğrafını</strong> çekip kaydedebilir, fotoğrafları ya da öğrencileri <strong>birbirine karıştırabilir</strong> ve bir fotoğrafı yanlışlıkla <strong>başka bir veliye gösterebilir</strong>.</li>
 <li>Giriş–çıkış kaydı gecikebilir, hiç oluşmayabilir ya da yanlış öğrenciye yazılabilir.</li>
 </ul>
