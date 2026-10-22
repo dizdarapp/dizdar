@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hesap ve Veri Silme — Dizdar</title>
+<meta name="description" content="Dizdar uygulamasında hesabınızı ve verilerinizi nasıl silersiniz.">
+<style>
+  :root{
+    --orman:#1F4D3A;
+    --orman-koyu:#143528;
+    --krem:#F5EDD6;
+    --krem-acik:#FAF4E0;
+    --krem-solgun:#E8DFC4;
+    --uyari:#B8731A;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--krem);
+    color:var(--orman-koyu);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+         "Helvetica Neue",Arial,sans-serif;
+  }
+  .sarmal{max-width:720px;margin:0 auto;padding:40px 20px 80px}
+
+  header{text-align:center;padding:24px 0 36px;border-bottom:1px solid rgba(31,77,58,.12)}
+  .marka{
+    font-size:30px;font-weight:800;letter-spacing:.14em;
+    color:var(--orman);margin:0;
+  }
+  .alt{margin:8px 0 0;font-size:14px;color:rgba(31,77,58,.6)}
+
+  h1{font-size:26px;line-height:1.3;margin:36px 0 10px;color:var(--orman-koyu)}
+  h2{font-size:19px;margin:34px 0 10px;color:var(--orman)}
+  h3{font-size:16px;margin:22px 0 6px;color:var(--orman-koyu)}
+  p{margin:10px 0}
+  ul,ol{margin:10px 0;padding-left:22px}
+  li{margin:6px 0}
+  strong{color:var(--orman-koyu)}
+
+  .kutu{
+    background:var(--krem-acik);
+    border:1px solid rgba(31,77,58,.10);
+    border-radius:14px;
+    padding:18px 20px;
+    margin:18px 0;
+  }
+  .kutu h3{margin-top:0}
+
+  .vurgu{
+    background:#FDF4E3;
+    border-left:4px solid var(--uyari);
+    border-radius:0 10px 10px 0;
+    padding:14px 18px;
+    margin:18px 0;
+  }
+
+  .adim{counter-reset:adim;list-style:none;padding:0;margin:14px 0}
+  .adim li{
+    counter-increment:adim;
+    position:relative;
+    padding:10px 0 10px 42px;
+    border-bottom:1px solid rgba(31,77,58,.08);
+  }
+  .adim li:last-child{border-bottom:0}
+  .adim li::before{
+    content:counter(adim);
+    position:absolute;left:0;top:10px;
+    width:26px;height:26px;border-radius:50%;
+    background:var(--orman);color:var(--krem);
+    font-size:13px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid rgba(31,77,58,.12);
+        vertical-align:top}
+  th{color:var(--orman);font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+
+  a{color:var(--orman);text-decoration-thickness:1px;text-underline-offset:3px}
+  .posta{
+    display:inline-block;margin-top:6px;
+    background:var(--orman);color:var(--krem);
+    padding:12px 22px;border-radius:26px;
+    font-weight:600;text-decoration:none;
+  }
+
+  footer{
+    margin-top:50px;padding-top:22px;
+    border-top:1px solid rgba(31,77,58,.12);
+    font-size:13px;color:rgba(31,77,58,.6);text-align:center;
+  }
+  footer a{color:rgba(31,77,58,.75)}
+
+  @media (max-width:520px){
+    .sarmal{padding:24px 16px 60px}
+    h1{font-size:22px}
+    .marka{font-size:25px}
+  }
+</style>
+</head>
+<body>
+<div class="sarmal">
+
+  <header>
+    <p class="marka">DİZDAR</p>
+    <p class="alt">Okul giriş–çıkış takip sistemi</p>
+  </header>
+
+  <h1>Hesap ve Veri Silme</h1>
+
+  <p>
+    Bu sayfa, <strong>Dizdar</strong> uygulamasında (Android paket adı
+    <code>com.dizdar.okul</code>, iOS uygulaması “Dizdar”) hesabınızı ve
+    verilerinizi nasıl sildireceğinizi anlatır.
+  </p>
+
+  <div class="kutu">
+    <h3>Kısaca</h3>
+    <p>
+      Silme işlemini <strong>uygulama içinden kendiniz</strong> yapabilirsiniz.
+      Uygulamayı kuramıyorsanız ya da telefonunuza erişiminiz yoksa
+      aşağıdaki e-posta adresinden talep edebilirsiniz.
+    </p>
+  </div>
+
+  <h2>Uygulama içinden silme</h2>
+
+  <h3>Veli iseniz</h3>
+  <p>
+    Veli bölümünde hesap oluşturulmaz; kullanıcı adı, e-posta veya şifre
+    istenmez. Eklediğiniz öğrenci bilgileri yalnızca telefonunuzda saklanır.
+  </p>
+  <ol class="adim">
+    <li>Uygulamayı açın, ana menüden <strong>Veli</strong> bölümüne girin.</li>
+    <li><strong>Ayarlar</strong> sekmesine dokunun.</li>
+    <li><strong>Verilerimi sil</strong> satırına dokunup onaylayın.</li>
+  </ol>
+  <p>
+    Tek bir çocuğu kaldırmak için öğrenci kartını açıp sağ üstteki
+    çöp kutusu simgesini kullanabilirsiniz.
+  </p>
+
+  <h3>Öğretmen iseniz</h3>
+  <p>
+    Öğretmen bölümünde, okul yönetiminin verdiği davet koduyla
+    oluşturulmuş bir hesabınız vardır.
+  </p>
+  <ol class="adim">
+    <li>Uygulamayı açın, <strong>Öğretmen</strong> bölümüne girin.</li>
+    <li><strong>Profil</strong> sekmesine dokunun.</li>
+    <li>Sayfanın altındaki <strong>Hesabımı sil</strong> satırına dokunup onaylayın.</li>
+  </ol>
+
+  <h2>Uygulama olmadan silme talebi</h2>
+  <p>
+    Telefonunuzu kaybettiyseniz, uygulamayı kaldırdıysanız veya başka bir
+    sebeple uygulamaya erişemiyorsanız, aşağıdaki adrese yazarak silme
+    talebinde bulunabilirsiniz.
+  </p>
+
+  <p>
+    <a class="posta" href="mailto:dizdarapp@gmail.com?subject=Hesap%20ve%20Veri%20Silme%20Talebi">
+      dizdarapp@gmail.com
+    </a>
+  </p>
+
+  <p>E-postanızda şunları belirtin:</p>
+  <ul>
+    <li>Veli misiniz, öğretmen misiniz?</li>
+    <li>Okulunuzun adı</li>
+    <li>Veliyseniz: çocuğunuzun okul numarası</li>
+    <li>Öğretmenseniz: adınız soyadınız</li>
+  </ul>
+
+  <p>
+    Talepler <strong>en geç 30 gün</strong> içinde sonuçlandırılır ve size
+    yazılı olarak bildirilir. Kimlik doğrulaması için okulunuzdan teyit
+    isteyebiliriz; bu, başkasının sizin adınıza veri sildirmesini önlemek
+    içindir.
+  </p>
+
+  <h2>Android erken erişim listesinden çıkma</h2>
+  <p>
+    Android uygulaması Google Play'de herkese açık olana kadar erken erişimle
+    dağıtılır. Erken erişim isteyen okul yöneticisi, öğretmen ve velilerin
+    Google Play e-posta adresleri, Google'ın standart erken erişim prosedürü
+    gereği <strong>Google Play Console</strong>'daki listeye kaydedilir ve
+    <strong>yalnızca erken erişim hakkı vermek</strong> için kullanılır.
+  </p>
+  <p>
+    Adresinizin listeden silinmesini ve erken erişimden çıkarılmanızı
+    istediğiniz zaman
+    <a href="mailto:dizdarapp@gmail.com?subject=Erken%20Eri%C5%9Fim%20Listesinden%20%C3%87%C4%B1kma">dizdarapp@gmail.com</a>
+    adresine yazarak isteyebilirsiniz; e-postada listedeki Google Play adresinizi
+    belirtin. Erken erişim katılım sayfasından programdan kendiniz de
+    ayrılabilirsiniz. E-posta adresi vermek istemeyenler, uygulamanın Google
+    Play'de herkese açık yayımlanmasını bekleyebilir.
+  </p>
+
+  <h2>Ne siliniyor, ne silinmiyor</h2>
+
+  <table>
+    <thead>
+      <tr><th>Veri</th><th>Durum</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Öğretmen hesabı (ad soyad, branş, unvan, atanan sınıflar, şifre özeti)</td>
+        <td><strong>Silinir</strong></td>
+      </tr>
+      <tr>
+        <td>Telefonunuzdaki öğrenci kayıtları ve erişim kodu</td>
+        <td><strong>Silinir</strong></td>
+      </tr>
+      <tr>
+        <td>Bildirim kaydı (cihaz bildirim kimliği)</td>
+        <td><strong>Silinir</strong></td>
+      </tr>
+      <tr>
+        <td>Çocuğunuzun geçiş fotoğrafları</td>
+        <td>Sunucuda <strong>saklanmaz</strong> — okul girişindeki cihazda şifreli durur, en geç gün sonunda kalıcı olarak silinir</td>
+      </tr>
+      <tr>
+        <td>Okulun giriş–çıkış kayıtları (devamsızlık verisi)</td>
+        <td>Silinmez — aşağıdaki açıklamaya bakın</td>
+      </tr>
+      <tr>
+        <td>Okulun öğrenci listesi (ad soyad, sınıf, numara)</td>
+        <td>Silinmez — aşağıdaki açıklamaya bakın</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="vurgu">
+    <p style="margin-top:0">
+      <strong>Giriş–çıkış kayıtları neden silinmiyor?</strong>
+    </p>
+    <p style="margin-bottom:0">
+      Bu kayıtlar okulun devam takibi için tuttuğu resmî verilerdir ve veri
+      sorumlusu okuldur, uygulama değildir. Velinin ya da öğretmenin silme
+      talebiyle bir okulun devamsızlık kaydını silemeyiz. Bu kayıtların
+      silinmesini istiyorsanız doğrudan okulunuza başvurmanız gerekir.
+      Uygulama hesabınızı silmeniz, okulun kaydını etkilemez; siz artık o
+      kayıtları uygulamadan göremezsiniz.
+    </p>
+  </div>
+
+  <h2>Silme sonrası</h2>
+  <ul>
+    <li>
+      <strong>Veli:</strong> Çocuğunuzu tekrar eklemek isterseniz okuldan
+      <em>yeni bir erişim kodu</em> almanız gerekir. Eski kod geçersiz olur.
+    </li>
+    <li>
+      <strong>Öğretmen:</strong> Tekrar giriş yapmak için okul yönetiminden
+      <em>yeni bir davet QR kodu</em> istemeniz gerekir.
+    </li>
+  </ul>
+
+  <h2>Saklama süreleri</h2>
+  <ul>
+    <li>Geçiş fotoğrafları: sunucuda saklanmaz; okul girişindeki cihazda <strong>en geç gün sonunda</strong> kalıcı olarak silinir.</li>
+    <li>Silinen hesap kayıtları: talep üzerine <strong>anında</strong> silinir,
+        yedeklerden en geç <strong>30 gün</strong> içinde düşer.</li>
+    <li>Erken erişim e-posta adresi: silinmesini isteyene ya da erken erişim
+        listesine artık gerek kalmayana kadar Google Play Console'da.</li>
+    <li>Yüz tanıma verisi: yalnızca okul girişindeki cihazda, şifrelenmiş
+        olarak tutulur; buluta gönderilmez. Okul yönetimi istediği an silebilir.</li>
+  </ul>
+
+  <footer>
+    <p>
+      <a href="index.html">Ana sayfa</a> ·
+      <a href="privacy.html">Gizlilik Politikası</a>
+    </p>
+    <p>Son güncelleme: 01.10.2026</p>
+    <p>© 2026 Dizdar · dizdarapp@gmail.com</p>
+  </footer>
+
+</div>
+</body>
+</html>
