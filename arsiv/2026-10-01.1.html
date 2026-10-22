@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Onay Metinleri 2026-10-01.1 — Dizdar</title>
+<style>
+  :root {
+    --zemin: #F4F0E3; --kart: #FBF8EF; --metin: #1F2B25;
+    --yesil: #1B4A38; --soluk: #5E6B63; --cizgi: #DDD6C3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --zemin: #121A16; --kart: #1A241F; --metin: #E9E5D8;
+      --yesil: #8FC4A8; --soluk: #A3ADA7; --cizgi: #2C3A33;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--zemin); color: var(--metin);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: env(safe-area-inset-top, 0) 0 env(safe-area-inset-bottom, 0);
+  }
+  main {
+    max-width: 760px; margin: 32px auto; padding: 36px 28px;
+    background: var(--kart); border: 1px solid var(--cizgi); border-radius: 20px;
+  }
+  .marka { color: var(--yesil); font-weight: 700; letter-spacing: .14em; font-size: 13px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 18px; }
+  h2 { color: var(--yesil); font-size: 20px; margin: 34px 0 8px; }
+  h3 { font-size: 16px; margin: 22px 0 6px; }
+  p, li { color: var(--metin); }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  a { color: var(--yesil); }
+  hr { border: 0; border-top: 1px solid var(--cizgi); margin: 28px 0; }
+  nav { max-width: 760px; margin: 0 auto; padding: 18px 28px 0; font-size: 14px; }
+  nav a { margin-right: 18px; text-decoration: none; }
+  footer { text-align: center; color: var(--soluk); font-size: 13px; padding: 0 20px 32px; }
+  @media (max-width: 600px) { main { margin: 16px 10px; padding: 26px 18px; } h1 { font-size: 25px; } }
+</style>
+<style>pre.metin{white-space:pre-wrap;font:inherit;background:var(--zemin);border:1px solid var(--cizgi);border-radius:12px;padding:16px;}code{word-break:break-all;font-size:13px;}</style>
+</head>
+<body>
+<nav><a href="../privacy.html">Gizlilik Politikası</a><a href="../terms.html">Kullanım Şartları</a></nav>
+<main>
+<div class="marka">DİZDAR</div>
+<h1>Onay Metinleri — Sürüm 2026-10-01.1</h1>
+<p><strong>Yürürlük tarihi:</strong> 01.10.2026 · <strong>Metin sürümü:</strong> 2026-10-01.1</p>
+<p>Bu sayfa, DİZDAR uygulamasında bu sürümde onaya sunulan metinlerin <strong>değiştirilmemiş</strong> hâlidir. Her onay kaydı sunucuda bu sürüm numarası ve aşağıdaki parmak izi (SHA-256) ile saklanır. Metin değiştiğinde yeni sürüm yayımlanır; bu sayfa olduğu gibi kalır.</p>
+<p><a href="./index.html">← Bütün sürümler</a></p>
+<h2>Veli Aydınlatma Metni</h2>
+<pre class="metin">VELİ AYDINLATMA METNİ
+Sürüm 1 · 01.10.2026
+
+Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu&#x27;nun (KVKK) 10. maddesi uyarınca, DİZDAR uygulamasını kullanan velileri bilgilendirmek için hazırlanmıştır.
+
+1. TARAFLAR VE ROLLER
+• Veri sorumlusu: Öğrencinin kayıtlı olduğu OKUL (kurum). Giriş–çıkış sisteminin kullanılmasına, hangi yöntemin (kart ya da yüz tanıma) uygulanacağına ve kayıtların amacına okul karar verir.
+• Veri işleyen: DİZDAR (geliştirici: Ali ÇINAR). DİZDAR yalnızca okulun talimatıyla, okul adına teknik hizmet sağlar; verileri kendi amacı için kullanmaz, satmaz, reklam için işlemez.
+• Veli: Kendi ve çocuğuna ait izinleri verir, değiştirir ve geri çeker.
+
+2. İŞLENEN VERİLER
+• Öğrenci: ad soyad, sınıf, okul numarası, giriş–çıkış saatleri ve yöntemi (kart / yüz).
+• Veli: uygulamanın rastgele cihaz kimliği, bildirim adresi (izin verilirse), künyede okulun girdiği ad soyad, telefon ve yakınlık bilgisi.
+• Yüz tanıma şablonu (yalnızca veli açık rıza verirse): yüzden türetilen sayısal imza. Yalnızca okul girişindeki cihazda, cihaza özel anahtarla ŞİFRELİ tutulur; sunucuya, öğretmen ya da veli telefonlarına gönderilmez. Şablondan fotoğraf geri üretilemez.
+• Geçiş fotoğrafı (yalnızca veli açık rıza verirse ve yalnızca yüz tanıma izni açıkken): okul girişindeki cihazda şifreli tutulur. Yalnızca veli uygulamada istediğinde ve her veliye BİR KEZ gösterilir. Fotoğraf sunucuda kalıcı olarak saklanmaz; gösterim için birkaç saniyeliğine aktarılır ve hemen silinir. Hiç istenmeyen fotoğraflar en geç aynı günün sonunda (yeni gün başlarken) kalıcı olarak silinir.
+• Onay ve izin kayıtları: kim, ne zaman, hangi metin sürümüne onay verdi; hangi izni kim açtı ya da kapattı.
+• Google Play e-posta adresi (yalnızca Android erken erişime katılmak isteyenler): bkz. madde 8.
+
+3. AMAÇLAR
+• Öğrencinin okula giriş–çıkışının kaydedilmesi ve veliye bildirilmesi,
+• Okulun yoklama, güvenlik ve idari işlerinin yürütülmesi,
+• Rızaya dayalı yüz tanıma ve geçiş fotoğrafı hizmetinin sunulması,
+• Onay ve izinlerin ispatı, yasal yükümlülüklerin yerine getirilmesi.
+
+4. HUKUKİ SEBEPLER (KVKK m. 5 ve m. 6)
+• Okulun hukuki yükümlülüklerini yerine getirmesi ve meşru menfaati (m. 5/2-ç, m. 5/2-f),
+• Kanunlarda açıkça öngörülmesi (m. 5/2-a),
+• Yüz tanıma şablonu (biyometrik veri) ve geçiş fotoğrafı için yalnızca velinin AÇIK RIZASI (m. 5/1, m. 6).
+
+5. YÜZ TANIMA İSTEĞE BAĞLIDIR — KART HER ZAMAN VARDIR
+Yüz tanıma, okul ile velinin ortak kararıyla ve yalnızca velinin açık rızasıyla uygulanır. Veli rıza vermezse çocuğu hiçbir kısıtlama olmadan KART (karekod) ile giriş–çıkış yapar. Rıza vermemek ya da geri çekmek hiçbir hizmetin kısıtlanmasına yol açmaz. Veli rızasını uygulamadan istediği an geri çekebilir; bu durumda yüz şablonu okul girişindeki cihazdan kısa süre içinde kalıcı olarak silinir ve geçiş fotoğrafı çekilmez.
+
+6. OTOMATİK SİSTEMİN SINIRLARI — HATA OLABİLİR
+Giriş–çıkış kaydı, yüz tanıma ve geçiş fotoğrafı, okul girişindeki cihazda otomatik çalışan bir sistemle yapılır ve her otomatik sistem gibi hata yapabilir:
+• Kamera kadrajında çocuğunuzun yanında başka öğrenciler veya kişiler görünebilir.
+• Sistem yanlışlıkla başka bir öğrencinin fotoğrafını çekip kaydedebilir, fotoğrafları ya da öğrencileri birbirine karıştırabilir ve bir fotoğrafı yanlışlıkla başka bir veliye gösterebilir.
+• Giriş–çıkış kaydı gecikebilir, hiç oluşmayabilir ya da yanlış öğrenciye yazılabilir.
+DİZDAR, yasaların izin verdiği ölçüde, bu tür hatalardan ve sonuçlarından sorumluluk kabul etmez. Uygulamada gördüğünüz kayıt ve fotoğraflar yalnızca bilgilendirme amaçlıdır; kesin bilgi için okulla iletişime geçin. Size başka bir çocuğa ait bir fotoğraf veya kayıt gösterilirse onu kaydetmemeli, ekran görüntüsünü almamalı, kimseyle paylaşmamalı ve durumu okula bildirmelisiniz.
+
+7. AKTARIM
+• Kamu kurumları: Kayıtlar; T.C. Millî Eğitim Bakanlığı ve bağlı il/ilçe millî eğitim müdürlükleri, yargı mercileri, kolluk kuvvetleri ve kanunen yetkili diğer kamu kurum ve kuruluşlarına, yasal talepleri hâlinde ve talebin yasal dayanağı ve kapsamıyla sınırlı olarak verilir (KVKK m. 8, m. 28).
+• Hizmet sağlayıcılar: Kayıtlar, Avrupa Birliği bölgesindeki güvenli bulut sunucularında (Google LLC altyapısı) tutulur ve işlenir. Bildirimler telefonunuzun işletim sisteminin bildirim servisiyle iletilir.
+• Veriler hiçbir şekilde satılmaz, reklam veya profil oluşturma için kullanılmaz.
+
+8. ANDROID ERKEN ERİŞİM (GOOGLE PLAY)
+DİZDAR&#x27;ın Android uygulaması Google Play&#x27;de henüz herkese açık yayımlanmamıştır; erken erişim aşamasındadır. iPhone uygulaması App Store&#x27;da herkese açıktır ve bu madde iPhone kullanıcılarını ilgilendirmez.
+• Google, erken erişimdeki bir uygulamayı yalnızca listeye eklenmiş kişilerin indirmesine izin verir. Bu nedenle erken erişim isteyen okul yöneticisi, öğretmen ve velilerin Google Play hesaplarına ait e-posta adresleri, Google Play Console&#x27;daki erken erişim (test) listesine kaydedilir ve bu kişilere erken erişim hakkı verilir. Bu, Google&#x27;ın erken erişim için uyguladığı standart bir prosedürdür.
+• E-posta adresi YALNIZCA erken erişim hakkı vermek amacıyla kullanılır. Başka hiçbir amaçla kullanılmaz, kimseyle paylaşılmaz, satılmaz; reklam veya tanıtım iletisi göndermek için kullanılmaz ve uygulamadaki öğrenci, okul ya da giriş–çıkış kayıtlarıyla eşleştirilmez.
+• Liste, Google Play Console&#x27;da Google&#x27;ın altyapısında tutulur.
+• İstediğiniz zaman dizdarapp@gmail.com adresine yazarak e-posta adresinizin listeden silinmesini ve erken erişimden çıkarılmanızı isteyebilirsiniz; talebiniz en kısa sürede yerine getirilir. Erken erişim katılım sayfasından programdan kendiniz de ayrılabilirsiniz.
+• E-posta adresini vermek istemeyenler, uygulamanın Google Play&#x27;de herkese açık olarak yayımlanmasını beklemelidir. Yayından sonra uygulama e-posta adresi gerekmeden indirilebilir.
+
+9. SAKLAMA SÜRELERİ
+• Geçiş fotoğrafı: en geç aynı günün sonunda kalıcı olarak silinir.
+• Yüz tanıma şablonu: rıza geri çekilene, okul silene ya da öğrenci okuldan ayrılana kadar; yalnızca okul girişindeki cihazda.
+• Giriş–çıkış kayıtları: okulun belirlediği süre boyunca; okul belirlediği tarihten önceki kayıtları toplu olarak silebilir.
+• Onay ve izin kayıtları: okulların ve yetkili kamu kurumlarının talebi hâlinde verilmek üzere SÜRESİZ saklanır.
+• Erken erişim e-posta adresi: siz silinmesini isteyene ya da erken erişim listesine artık gerek kalmayana kadar.
+
+10. ÜCRETSİZ HİZMET VE HİZMETİN SONA ERMESİ
+DİZDAR ücretsiz ve reklamsızdır. DİZDAR hizmeti istediği zaman sona erdirebilir. Hizmet sona erdiğinde, onay ve izin kayıtları talep eden okula teslim edildikten sonra bütün kayıtlar sunuculardan ve cihazlardan KALICI OLARAK silinir ve sistem kapatılır.
+
+11. HAKLARINIZ (KVKK m. 11)
+Verilerinizin işlenip işlenmediğini öğrenme, bilgi isteme, düzeltilmesini ya da silinmesini isteme, itiraz etme ve zararın giderilmesini talep etme haklarına sahipsiniz. Öğrenci kayıtlarıyla ilgili başvurular veri sorumlusu olan OKULA yapılır. Uygulamayla ilgili sorular için: dizdarapp@gmail.com
+
+Ayrıntılı metin: https://dizdarapp.github.io/dizdar/privacy.html</pre>
+<h2>Kullanım Şartları</h2>
+<pre class="metin">KULLANIM ŞARTLARI
+Sürüm 1 · 01.10.2026
+
+1. Hizmet: DİZDAR, okulun giriş–çıkış sisteminin veliler, öğretmenler ve okul yönetimi için takip aracıdır. Kayıtları okul sistemi oluşturur; DİZDAR okul adına teknik hizmet sağlayan uygulayıcıdır.
+
+2. Ücretsiz, olduğu gibi: Hizmet ücretsizdir ve &quot;olduğu gibi&quot; sunulur. Kesintisiz, hatasız ya da her zaman erişilebilir olacağı garanti edilmez. DİZDAR bir acil durum veya güvenlik sistemi değildir; acil durumlarda doğrudan okulla iletişime geçilmelidir.
+
+3. Sorumluluk dağılımı:
+• OKUL (veri sorumlusu): sistemin kullanılmasına ve yönteme karar verir; velileri bilgilendirir; yüz tanıma ve geçiş fotoğrafı için velinin açık rızasını alır ve belgesini saklar; rıza vermeyenlere kart sistemini sunar; öğrenci ve künye bilgilerinin doğruluğundan ve yetkili personelin seçiminden sorumludur.
+• VELİ: izinleri kendi iradesiyle verir, değiştirir, geri çeker; erişim kodunu kimseyle paylaşmaz; uygulamayı yalnızca kendi çocuğu için kullanır.
+• DİZDAR (veri işleyen): okulun talimatıyla teknik hizmeti sağlar, verileri güvenli tutar, kendi amacı için kullanmaz. Yüz tanımanın uygulanmasına ilişkin karar ve rıza süreçleri okul ile veliye aittir; DİZDAR bu kararların sorumluluğunu üstlenmez ve her durumda yüz tanımaya gerek kalmadan çalışan KART sistemini sunar.
+
+4. Otomatik sistem hata yapabilir: Giriş–çıkış kaydı, yüz tanıma ve geçiş fotoğrafı otomatik çalışan bir sistemle yapılır. Kamera kadrajında başka öğrenciler veya kişiler görünebilir; sistem yanlışlıkla başka bir öğrencinin fotoğrafını çekip kaydedebilir, fotoğrafları ya da öğrencileri birbirine karıştırabilir, bir fotoğrafı yanlışlıkla başka bir veliye gösterebilir; giriş–çıkış kaydı gecikebilir, oluşmayabilir ya da yanlış öğrenciye yazılabilir. Uygulamadaki kayıt ve fotoğraflar yalnızca bilgilendirme amaçlıdır; kesin bilgi için okulla iletişime geçilmelidir. Başkasına ait bir fotoğraf veya kayıt gören kişi onu kaydetmez, ekran görüntüsünü almaz, paylaşmaz ve okula bildirir.
+
+5. Sorumluluğun sınırı: Yasaların izin verdiği ölçüde DİZDAR; otomatik sistemin yukarıdaki hatalarından (yanlış fotoğrafın çekilmesi, kaydedilmesi, karıştırılması ya da yanlış kişiye gösterilmesi dahil), bildirimlerin gecikmesinden ya da ulaşmamasından, okulun girdiği bilgilerin yanlışlığından, internet/sunucu kesintilerinden, uygulamanın geçici ya da kalıcı olarak çalışmamasından ve yalnızca uygulamaya güvenilmesinden doğan zararlardan sorumlu tutulamaz ve bunlar için sorumluluk kabul etmez. Bu sınırlama, kanunun kaldırılmasına izin vermediği sorumlulukları ortadan kaldırmaz.
+
+6. Kurum ve öğretmen şifreleri nasıl korunur: Okul yönetimi ve öğretmen hesaplarının şifreleri hiçbir yerde açık (düz metin) hâliyle saklanmaz.
+• Şifre, yazıldığı telefonda, her hesap için ayrıca üretilen rastgele bir &quot;tuz&quot; (salt) değeriyle birleştirilir ve SHA-256 adlı tek yönlü özetleme (hash) yöntemiyle geri çevrilemeyen bir özete dönüştürülür.
+• Sunucuya yalnızca bu özet ve tuz gönderilir; şifrenin kendisi sunucuya hiç gitmez, hiçbir kayıtta yer almaz.
+• Giriş yaparken yazdığınız şifre aynı yöntemle yeniden özetlenir ve kayıtlı özetle karşılaştırılır; eşleşirse giriş yapılır.
+• Bu sayede şifrenizi DİZDAR, okul yönetimi ya da sunucuya erişebilen hiç kimse göremez; özetten şifre geri elde edilemez. Tuz sayesinde aynı şifreyi kullanan iki kişinin özetleri bile birbirinden farklıdır.
+• Hesap ayrıca davetin okutulduğu telefona bağlıdır. Uygulama silinir ya da telefon değişirse okuldan yeni davet karekodu gerekir. Hesap başka bir telefona taşınamaz; telefon kaybolursa okul yönetimi hesabı hemen kaldırabilir.
+• Şifrenizi unutursanız DİZDAR dahil kimse size söyleyemez; &quot;Şifremi unuttum&quot; ile okul yönetiminin vereceği yeni davetle yeni şifre belirlersiniz.
+• Şifrenizi kimseyle paylaşmamak, tahmin edilmesi zor bir şifre seçmek ve başka hizmetlerde kullandığınız şifreyi burada kullanmamak sizin sorumluluğunuzdadır.
+
+7. Android erken erişim (Google Play): DİZDAR&#x27;ın Android uygulaması Google Play&#x27;de henüz herkese açık değildir; erken erişim aşamasındadır. Google, erken erişimdeki uygulamayı yalnızca listeye eklenmiş kişilerin indirmesine izin verir. Bu nedenle erken erişim isteyen okul yöneticisi, öğretmen ve velilerin Google Play hesaplarına ait e-posta adresleri Google Play Console&#x27;daki erken erişim listesine kaydedilir ve bu kişilere erken erişim hakkı verilir; bu, Google&#x27;ın erken erişim için uyguladığı standart bir prosedürdür. E-posta adresi yalnızca bu amaçla kullanılır; başka amaçla kullanılmaz, paylaşılmaz, reklam veya tanıtım iletisi için kullanılmaz. Kişiler istedikleri zaman dizdarapp@gmail.com adresine yazarak adreslerini sildirme ve erken erişimden çıkarılma hakkına sahiptir. E-posta adresi vermek istemeyenler uygulamanın Google Play&#x27;de herkese açık yayımlanmasını beklemelidir. iPhone uygulaması App Store&#x27;da herkese açıktır; bu madde iPhone kullanıcılarını ilgilendirmez.
+
+8. Kamu kurumları: Kayıtlar, T.C. Millî Eğitim Bakanlığı ve kanunen yetkili diğer kamu kurum ve kuruluşlarına yasal talepleri hâlinde verilir.
+
+9. Hizmetin sona ermesi: DİZDAR hizmeti istediği zaman sona erdirebilir. Bu durumda onay ve izin kayıtları talep eden okula teslim edildikten sonra bütün kayıtlar kalıcı olarak silinir ve sistem kapatılır.
+
+10. Kayıt altına alma: Onaylar, izin değişiklikleri ve yönetim erişimleri değiştirilemez biçimde kayda geçirilir ve okulların ve yetkili kamu kurumlarının talebi hâlinde verilmek üzere süresiz saklanır.
+
+11. Değişiklikler: Şartlar ve aydınlatma metni güncellenebilir; yeni sürüm uygulamada yeniden onaya sunulur. Her onay ayrı bir nüsha olarak saklanır.
+
+12. Uygulanacak hukuk: Türkiye Cumhuriyeti hukuku. İletişim: dizdarapp@gmail.com
+
+Ayrıntılı metin: https://dizdarapp.github.io/dizdar/terms.html</pre>
+<h2>Açık Rıza — Yüz Tanıma</h2>
+<pre class="metin">AÇIK RIZA — YÜZ TANIMA
+Sürüm 1 · 01.10.2026
+
+Velisi olduğum öğrencinin, okul girişindeki cihazda yüz tanıma ile tanınmasına; bu amaçla yüzünden türetilen sayısal şablonun (biyometrik veri) YALNIZCA okul girişindeki cihazda şifreli olarak saklanmasına ve işlenmesine, KVKK&#x27;nın 6. maddesi uyarınca kendi özgür irademle açık rıza veriyorum.
+
+Biliyorum ki:
+• Yüz tanıma isteğe bağlıdır; rıza vermezsem çocuğum kart ile giriş–çıkış yapar, hiçbir hizmet kısıtlanmaz.
+• Yüz tanımanın uygulanması okul ile velinin ortak kararıdır; DİZDAR yalnızca teknik uygulayıcıdır.
+• Rızamı bu uygulamadan istediğim an geri çekebilirim; geri çektiğimde şablon kısa süre içinde kalıcı olarak silinir.
+• Yüz tanıma otomatik bir sistemdir ve hata yapabilir: çocuğum tanınmayabilir, başka bir öğrenciyle karıştırılabilir ya da giriş–çıkış kaydı yanlış öğrenciye yazılabilir. Bu durumda kart her zaman kullanılabilir. DİZDAR, yasaların izin verdiği ölçüde, bu tür hatalardan sorumluluk kabul etmez.
+• Bu onayım, kim tarafından ve ne zaman verildiğiyle birlikte değiştirilemez biçimde kayda geçirilir ve süresiz saklanır.</pre>
+<h2>Açık Rıza — Geçiş Fotoğrafı</h2>
+<pre class="metin">AÇIK RIZA — GEÇİŞ FOTOĞRAFI
+Sürüm 1 · 01.10.2026
+
+Velisi olduğum öğrencinin okula giriş–çıkış anında fotoğrafının çekilmesine; bu fotoğrafın okul girişindeki cihazda şifreli tutulmasına ve yalnızca ben istediğimde bana bir kez gösterilmesine açık rıza veriyorum.
+
+Biliyorum ki:
+• Geçiş fotoğrafı yalnızca yüz tanıma izni açıkken verilebilir; yüz tanıma izni kapatılırsa fotoğraf izni de kendiliğinden kapanır.
+• Fotoğraf yalnızca veli istediğinde ve her veliye BİR KEZ gösterilir; gösterim için birkaç saniyeliğine sunucudan geçer ve hemen silinir.
+• Hiç istenmeyen fotoğraflar en geç aynı günün sonunda kalıcı olarak silinir.
+• Rızamı istediğim an geri çekebilirim; geri çektiğimde fotoğraf çekimi durur.
+• Fotoğraf otomatik çekilir ve sistem hata yapabilir: kadrajda başka öğrenciler veya kişiler görünebilir; sistem yanlışlıkla başka bir öğrencinin fotoğrafını çekip kaydedebilir, fotoğrafları karıştırabilir ya da bana başkasına ait bir fotoğraf gösterebilir. DİZDAR, yasaların izin verdiği ölçüde, bu tür hatalardan sorumluluk kabul etmez.
+• Bana başka bir çocuğa ait fotoğraf gösterilirse onu kaydetmeyeceğim, ekran görüntüsünü almayacağım, kimseyle paylaşmayacağım ve okula bildireceğim.
+• Bu onayım kayda geçirilir ve süresiz saklanır.</pre>
+<h2>Kurum Taahhütnamesi</h2>
+<pre class="metin">KURUM (VERİ SORUMLUSU) TAAHHÜTNAMESİ
+Sürüm 1 · 01.10.2026
+
+Okulumuz adına DİZDAR sistemini kullanan yetkili olarak aşağıdakileri kabul ve taahhüt ederim:
+
+1. Okulumuz, DİZDAR ile işlenen öğrenci, veli ve personel verilerinin VERİ SORUMLUSUDUR. Sistemin kullanılmasına, kart ya da yüz tanıma yönteminin uygulanmasına okulumuz karar verir.
+2. DİZDAR, okulumuzun talimatıyla hareket eden VERİ İŞLEYEN ve teknik uygulayıcıdır; ücretsiz hizmet sunar. Yüz tanımanın uygulanmasına ilişkin karar ve rıza süreçlerinin sorumluluğu okulumuza ve veliye aittir; DİZDAR bu sorumluluğu üstlenmez ve her durumda kart sistemini sunar.
+3. Velileri KVKK m. 10 uyarınca aydınlatmak; yüz tanıma ve geçiş fotoğrafı için velinin AÇIK RIZASINI almak ve yazılı belgesini saklamak okulumuzun yükümlülüğüdür. Velinin rızası olmadan yüz tanıma veya fotoğraf iznini AÇMAYACAĞIZ. Rıza vermeyen öğrencilere kart sistemini sunacağız.
+4. Künyede bir izni açtığımızda veya kapattığımızda, bunu yapan kişinin adı ve zamanı değiştirilemez biçimde kayda geçirilir; bu kayıtlar süresiz saklanır ve talebimizde bize verilir.
+5. Öğrenci ve künye bilgilerinin doğruluğundan, sisteme yetkilendirdiğimiz personelden ve erişim kodlarının velilere güvenli şekilde iletilmesinden okulumuz sorumludur.
+6. T.C. Millî Eğitim Bakanlığı ve kanunen yetkili diğer kamu kurum ve kuruluşlarının yasal talepleri öncelikle okulumuz tarafından karşılanır; DİZDAR da bu tür yasal taleplere talebin kapsamıyla sınırlı olarak bilgi verebilir.
+7. DİZDAR; şikâyet incelemesi, arıza giderme ve yasal talepler için, her erişimi gerekçesiyle kayda geçirerek kayıtlara erişebilir.
+8. Kayıtlar Avrupa Birliği bölgesindeki bulut sunucularında (Google LLC altyapısı) tutulur; bu durumun yurt dışına aktarım sayıldığını ve KVKK m. 9 kapsamındaki yükümlülükleri bildiğimizi kabul ederiz.
+9. Hizmet ücretsizdir ve &quot;olduğu gibi&quot; sunulur. DİZDAR hizmeti istediği zaman sona erdirebilir; bu durumda onay ve izin kayıtları talebimiz hâlinde bize teslim edildikten sonra bütün kayıtlar kalıcı olarak silinir.
+10. Yasaların izin verdiği ölçüde DİZDAR, okulumuzun kararlarından, girdiği bilgilerden ve rıza süreçlerinden doğan sonuçlardan sorumlu tutulamaz. Giriş–çıkış kaydı, yüz tanıma ve geçiş fotoğrafının otomatik çalıştığını; sistemin yanlışlıkla başka bir öğrencinin fotoğrafını çekip kaydedebileceğini, fotoğrafları ya da öğrencileri karıştırabileceğini, bir fotoğrafı yanlış veliye gösterebileceğini ve kaydı yanlış öğrenciye yazabileceğini; DİZDAR&#x27;ın bu hatalardan sorumluluk kabul etmediğini biliriz. Böyle bir durum bize bildirildiğinde gereğini okulumuz yapar.
+11. Şifreler: Okul yönetimi ve öğretmen şifrelerinin hiçbir yerde açık hâliyle saklanmadığını biliyoruz. Şifre, yazıldığı telefonda her hesaba özel rastgele bir &quot;tuz&quot; (salt) değeriyle birleştirilip SHA-256 tek yönlü özetleme (hash) yöntemiyle geri çevrilemeyen bir özete dönüştürülür; sunucuya yalnızca bu özet gider, şifrenin kendisi gitmez. Bu nedenle şifreyi DİZDAR dahil kimse göremez ve özetten geri elde edemez; unutulan şifre ancak yeni davetle yenilenir. Hesaplar davetin okutulduğu telefona bağlıdır. Davet karekodlarını yalnızca ilgili kişiye vermek, görevden ayrılan personelin hesabını kaldırmak ve personelimize şifrelerini kimseyle paylaşmamalarını, tahmin edilmesi zor ve başka yerde kullanmadıkları bir şifre seçmelerini bildirmek okulumuzun sorumluluğundadır (ayrıntı: Kullanım Şartları m. 6).
+12. Android erken erişim: Android uygulaması Google Play&#x27;de herkese açık olana kadar, erken erişim isteyen yönetici, öğretmen ve velilerin Google Play e-posta adresleri Google&#x27;ın standart erken erişim prosedürü gereği Google Play Console&#x27;daki listeye kaydedilir ve yalnızca erken erişim hakkı vermek için kullanılır. Bu adresleri DİZDAR&#x27;a yalnızca ilgili kişinin bilgisi ve isteğiyle ileteceğiz. Kişiler adreslerini istedikleri zaman sildirme ve erken erişimden çıkma hakkına sahiptir; e-posta vermek istemeyenler uygulamanın Google Play&#x27;de herkese açık yayımlanmasını bekler (ayrıntı: Kullanım Şartları m. 7).</pre>
+<h2>Personel Taahhütnamesi</h2>
+<pre class="metin">ÖĞRETMEN (PERSONEL) TAAHHÜTNAMESİ
+Sürüm 1 · 01.10.2026
+
+DİZDAR sistemini okulumun yetkilendirdiği personel olarak kullanırken:
+
+1. Öğrenci ve veli bilgilerini yalnızca görevimin gerektirdiği ölçüde, yalnızca bana atanan sınıflar için görüntüleyeceğimi; okul dışına çıkarmayacağımı ve üçüncü kişilerle paylaşmayacağımı,
+2. Yüz tanıma veya geçiş fotoğrafı iznini YALNIZCA elimde velinin yazılı rıza belgesi varsa açacağımı; açtığım ya da kapattığım her iznin adım ve zamanla değiştirilemez biçimde kayda geçirildiğini,
+3. Veri sorumlusunun okulum olduğunu, DİZDAR&#x27;ın okul adına teknik hizmet sağlayan uygulayıcı olduğunu ve hizmetin ücretsiz ve &quot;olduğu gibi&quot; sunulduğunu,
+4. Kayıtların T.C. Millî Eğitim Bakanlığı ve kanunen yetkili kamu kurumlarına yasal talepleri hâlinde verileceğini,
+5. Şifremin hiçbir yerde açık hâliyle saklanmadığını; telefonumda her hesaba özel rastgele bir &quot;tuz&quot; (salt) değeriyle birleştirilip SHA-256 tek yönlü özetleme (hash) yöntemiyle geri çevrilemeyen bir özete dönüştürüldüğünü ve sunucuya yalnızca bu özetin gittiğini; bu yüzden şifremi DİZDAR dahil kimsenin göremeyeceğini, unutursam ancak okulun vereceği yeni davetle yenileyebileceğimi; hesabımın davetin okutulduğu telefona bağlı olduğunu; şifremi kimseyle paylaşmamak, tahmin edilmesi zor ve başka yerde kullanmadığım bir şifre seçmek ve telefonumu korumakla sorumlu olduğumu (ayrıntı: Kullanım Şartları m. 6),
+6. Giriş–çıkış kaydı, yüz tanıma ve geçiş fotoğrafının otomatik çalıştığını ve hata yapabileceğini; sistemin yanlışlıkla başka bir öğrencinin fotoğrafını kaydedebileceğini veya öğrencileri karıştırabileceğini, DİZDAR&#x27;ın bu hatalardan sorumluluk kabul etmediğini; başka bir öğrenciye ait yanlış bir kayıt ya da fotoğraf görürsem onu paylaşmayacağımı ve okul yönetimine bildireceğimi,
+7. Android erken erişim istersem Google Play e-posta adresimin, Google&#x27;ın standart erken erişim prosedürü gereği Google Play Console&#x27;daki listeye kaydedileceğini ve yalnızca erken erişim hakkı vermek için kullanılacağını; adresimi istediğim zaman sildirme ve erken erişimden çıkma hakkım olduğunu; e-posta vermek istemezsem uygulamanın Google Play&#x27;de herkese açık yayımlanmasını beklemem gerektiğini,
+kabul ve taahhüt ederim.</pre>
+<h3>Veli onay kutuları</h3><ul><li>☐ Aydınlatma Metni&#x27;ni okudum ve anladım.</li><li>☐ Kullanım Şartları&#x27;nı kabul ediyorum.</li><li>☐ Kayıtların Avrupa Birliği bölgesindeki bulut sunucularında tutulmasına ve işlenmesine açık rıza veriyorum.</li></ul>
+<h3>Kurum onay kutuları</h3><ul><li>☐ Kurum Taahhütnamesi&#x27;ni okudum; okulum adına kabul ve taahhüt ediyorum.</li><li>☐ Kullanım Şartları&#x27;nı kabul ediyorum.</li></ul>
+<h3>Öğretmen onay kutuları</h3><ul><li>☐ Personel Taahhütnamesi&#x27;ni okudum; kabul ve taahhüt ediyorum.</li><li>☐ Kullanım Şartları&#x27;nı kabul ediyorum.</li></ul>
+<h2>Parmak izleri (SHA-256)</h2><ul><li>Veli onayı (aydınlatma + şartlar + kutular): <code>35601778ed09e30418cd8081661683b6032cef57cc66aa2975dc5fc9df964027</code></li><li>Kurum onayı (taahhütname + şartlar + kutular): <code>3341c52ae1456924d3c9c8643d8cec0f3725b3c418409871b0cece1104c8e1c1</code></li><li>Öğretmen onayı (taahhütname + şartlar + kutular): <code>ad9d6edfb3849fcbaa8b5dfba9d1f0f0a8be15456954f49b8fb8873cb7dbfd7b</code></li><li>Yüz tanıma açık rızası: <code>d4a9b01bc8f773b8bdd20a0c1c98df26cde884f85e78d9ed6de99d42870b19c0</code></li><li>Geçiş fotoğrafı açık rızası: <code>f1e71821ddf6d78b750edc3fb260d29c8e72081a300b2ae96eae0e0904d6e9c8</code></li></ul>
+</main>
+<footer>© 2026 Dizdar · <a href="mailto:dizdarapp@gmail.com">dizdarapp@gmail.com</a></footer>
+</body>
+</html>
