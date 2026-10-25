@@ -131,7 +131,7 @@
   <h3>Veli iseniz</h3>
   <p>
     Veli bölümünde hesap oluşturulmaz; kullanıcı adı, e-posta veya şifre
-    istenmez. Eklediğiniz öğrenci bilgileri yalnızca telefonunuzda saklanır.
+    istenmez. Çocuğunuz için yazdığınız ad ve sınıf yalnızca telefonunuzda saklanır; sunucuda öğrencinin adı, numarası ve sınıf adı bulunmaz.
   </p>
   <ol class="adim">
     <li>Uygulamayı açın, ana menüden <strong>Veli</strong> bölümüne girin.</li>
@@ -171,9 +171,10 @@
   <ul>
     <li>Veli misiniz, öğretmen misiniz?</li>
     <li>Okulunuzun adı</li>
-    <li>Veliyseniz: çocuğunuzun okul numarası</li>
-    <li>Öğretmenseniz: adınız soyadınız</li>
-  </ul>
+    <li>Veliyseniz: okulun kurum kodu ve hangi telefonu kullandığınız</li>
+      <li>Öğretmenseniz: okuldaki rolünüz (öğretmen / okul yönetimi)</li>
+    </ul>
+    <p>Sunucuda ad ve okul numarası bulunmadığından talebiniz okulunuz aracılığıyla doğrulanır; okul yönetimi veli bağlantınızı ya da öğretmen hesabınızı uygulamadan hemen kaldırabilir.</p>
 
   <p>
     Talepler <strong>en geç 30 gün</strong> içinde sonuçlandırılır ve size
@@ -208,11 +209,11 @@
     </thead>
     <tbody>
       <tr>
-        <td>Öğretmen hesabı (ad soyad, branş, unvan, atanan sınıflar, şifre özeti)</td>
+        <td>Öğretmen hesabı (unvan, atanan sınıf kodları, şifre özeti) ve telefonunuzdaki şifreli sınıf listesi</td>
         <td><strong>Silinir</strong></td>
       </tr>
       <tr>
-        <td>Telefonunuzdaki öğrenci kayıtları ve erişim kodu</td>
+        <td>Telefonunuzdaki öğrenci bilgileri (yazdığınız ad ve sınıf) ve veli bağlantısı</td>
         <td><strong>Silinir</strong></td>
       </tr>
       <tr>
@@ -221,38 +222,35 @@
       </tr>
       <tr>
         <td>Çocuğunuzun geçiş fotoğrafları</td>
-        <td>Sunucuda <strong>saklanmaz</strong> — okul girişindeki cihazda şifreli durur, en geç gün sonunda kalıcı olarak silinir</td>
+        <td>Sunucuda <strong>saklanmaz</strong></td>
       </tr>
       <tr>
-        <td>Okulun giriş–çıkış kayıtları (devamsızlık verisi)</td>
-        <td>Silinmez — aşağıdaki açıklamaya bakın</td>
+        <td>Giriş–çıkış kayıtları</td>
+          <td>Okulun belirlediği süre — aşağıdaki açıklamaya bakın</td>
       </tr>
       <tr>
         <td>Okulun öğrenci listesi (ad soyad, sınıf, numara)</td>
-        <td>Silinmez — aşağıdaki açıklamaya bakın</td>
+          <td>Sunucuda <strong>bulunmaz</strong> — yalnızca okulun cihazlarında şifreli; okul yönetir</td>
       </tr>
     </tbody>
   </table>
 
   <div class="vurgu">
     <p style="margin-top:0">
-      <strong>Giriş–çıkış kayıtları neden silinmiyor?</strong>
-    </p>
-    <p style="margin-bottom:0">
-      Bu kayıtlar okulun devam takibi için tuttuğu resmî verilerdir ve veri
-      sorumlusu okuldur, uygulama değildir. Velinin ya da öğretmenin silme
-      talebiyle bir okulun devamsızlık kaydını silemeyiz. Bu kayıtların
-      silinmesini istiyorsanız doğrudan okulunuza başvurmanız gerekir.
-      Uygulama hesabınızı silmeniz, okulun kaydını etkilemez; siz artık o
-      kayıtları uygulamadan göremezsiniz.
-    </p>
+      <strong>Giriş–çıkış kayıtları ne zaman silinir?</strong>
+      </p>
+      <p style="margin-bottom:0">
+        Giriş–çıkış kayıtlarının sorumlusu okuldur ve okulun belirlediği süre boyunca
+        saklanır. Hesabınızı silmeniz okulun kaydını etkilemez; siz artık o kayıtları
+        uygulamadan göremezsiniz.
+      </p>
   </div>
 
   <h2>Silme sonrası</h2>
   <ul>
     <li>
       <strong>Veli:</strong> Çocuğunuzu tekrar eklemek isterseniz okuldan
-      <em>yeni bir erişim kodu</em> almanız gerekir. Eski kod geçersiz olur.
+      <em>yeni bir veli şifresi</em> almanız gerekir.
     </li>
     <li>
       <strong>Öğretmen:</strong> Tekrar giriş yapmak için okul yönetiminden
@@ -262,7 +260,8 @@
 
   <h2>Saklama süreleri</h2>
   <ul>
-    <li>Geçiş fotoğrafları: sunucuda saklanmaz; okul girişindeki cihazda <strong>en geç gün sonunda</strong> kalıcı olarak silinir.</li>
+    <li>Giriş–çıkış kayıtları: okulun belirlediği süre boyunca.</li>
+      <li>Geçiş fotoğrafları: sunucuda saklanmaz; okul girişindeki cihazda <strong>en geç gün sonunda</strong> kalıcı olarak silinir.</li>
     <li>Silinen hesap kayıtları: talep üzerine <strong>anında</strong> silinir,
         yedeklerden en geç <strong>30 gün</strong> içinde düşer.</li>
     <li>Erken erişim e-posta adresi: silinmesini isteyene ya da erken erişim
@@ -276,7 +275,7 @@
       <a href="index.html">Ana sayfa</a> ·
       <a href="privacy.html">Gizlilik Politikası</a>
     </p>
-    <p>Son güncelleme: 01.10.2026</p>
+    <p>Son güncelleme: 05.10.2026</p>
     <p>© 2026 Dizdar · dizdarapp@gmail.com</p>
   </footer>
 
